@@ -1,13 +1,15 @@
 #include <iostream>
 #include <forward_list>
 #include <stack>
-
+#include "forward_queue.h"
 using namespace std;
 
 void question_1();
 void question_2();
+void question_3();
 int main() {
-    question_2();
+    //question_2();
+    question_3();
 }
 
 void question_1() {
@@ -37,4 +39,14 @@ void question_2() {
         }
     }
     cout << "是否匹配?" << stack.empty() << endl;
+}
+void question_3(){
+    forward_queue<int> queue;
+    queue.push(1);
+    queue.push(2);
+    queue.push(3);
+    queue.print();
+    queue.pop();
+    queue.print();
+
 }
